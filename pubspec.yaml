@@ -1,0 +1,50 @@
+name: hagglex
+description: app developer assessment
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  font_awesome_flutter: ^9.2.0
+  get: ^4.3.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_native_splash: ^1.2.4
+
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/w700.ttf
+          weight: 700
+        - asset: assets/fonts/w800.ttf
+          weight: 800
+        - asset: assets/fonts/w300.ttf
+          weight: 300
+        - asset: assets/fonts/w500.ttf
+          weight: 500
+        - asset: assets/fonts/w400.ttf
+          weight: 400
+        - asset: assets/fonts/w600.ttf
+          weight: 600
+
+flutter_native_splash:
+  color: "#18094A"
+  android: true
+  android_gravity: center
+  fullscreen: true
