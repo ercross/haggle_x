@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:hagglex/main.dart';
 import 'package:hagglex/stylesheet.dart';
+import 'package:hagglex/view/pages/authentication/email_verification.dart';
 import 'package:hagglex/view/widgets/buttons.dart';
 import 'package:hagglex/view/widgets/text_fields.dart';
 
@@ -62,19 +64,22 @@ class _BackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        alignment: Alignment.center,
-        height: height,
-        width: width,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          color: Colors.white24,
-        ),
-        child: Icon(
-          Icons.arrow_back_ios_rounded,
-          size: 20,
-          color: Colors.white,
-        ));
+    return GestureDetector(
+      onTap: Get.back,
+      child: Container(
+          alignment: Alignment.center,
+          height: height,
+          width: width,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25),
+            color: Colors.white24,
+          ),
+          child: Icon(
+            Icons.arrow_back_ios_rounded,
+            size: 20,
+            color: Colors.white,
+          )),
+    );
   }
 }
 
@@ -139,7 +144,7 @@ class _Content extends StatelessWidget {
                 colors: [HaggleXColour.primary, HaggleXColour.primaryLight],
               ),
               text: "SIGN UP",
-              onPressed: () {})
+              onPressed: () => Get.toNamed(EmailVerificationPage.route))
         ],
       );
     });

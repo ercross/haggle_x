@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:hagglex/view/pages/authentication/email_verification.dart';
-import 'package:hagglex/view/pages/authentication/sign_in.dart';
 
+import 'view/pages/authentication/email_verification.dart';
 import 'view/pages/authentication/email_verification_success.dart';
+import 'view/pages/authentication/sign_in.dart';
 import 'view/pages/authentication/sign_up.dart';
 import 'view/pages/homepage.dart';
 import 'view/pages/secondary_splash.dart';
 
 void main() {
-  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-  // SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-  //     statusBarColor: Colors.transparent,
-  //     statusBarBrightness: Brightness.light,
-  //     statusBarIconBrightness: Brightness.light));
   runApp(_HaggleX());
 }
 
@@ -41,7 +35,7 @@ class _HaggleX extends StatelessWidget {
         page: () => const SignUpPage(),
         curve: Curves.easeInCubic,
         transitionDuration: const Duration(milliseconds: _duration),
-        transition: Transition.rightToLeftWithFade),
+        transition: Transition.fadeIn),
     GetPage(
         name: EmailVerificationPage.route,
         page: () => const EmailVerificationPage(),
@@ -66,7 +60,7 @@ class _HaggleX extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Homepage.route,
+        initialRoute: SecondarySplashScreen.route,
         getPages: _pages);
   }
 }

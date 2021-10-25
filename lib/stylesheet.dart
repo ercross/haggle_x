@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HaggleXColour {
-  static const Color primary = Color(0xFF220E64);
+  static const Color primary = Color(0xFF2F1681);
   static const Color accent = Color(0xFFF1B94F);
   static const Color accentLight = Color(0xFFF3D191);
   static const Color accentWhite = Color(0xFFFFF8EA);

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:hagglex/view/pages/authentication/sign_in.dart';
 
 import '../../../main.dart';
 import '../../../stylesheet.dart';
@@ -101,7 +103,7 @@ class _Content extends StatelessWidget {
                   colors: [HaggleXColour.primary, HaggleXColour.primaryLight],
                 ),
                 text: "VERIFY ME",
-                onPressed: () {}),
+                onPressed: () => Get.offAndToNamed(SignInPage.route)),
             Text("The code will expire in 10 minutes",
                 textAlign: TextAlign.center, style: Fonts.black12w300),
             Text("Resend Code",
@@ -121,18 +123,21 @@ class _BackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        alignment: Alignment.center,
-        height: height,
-        width: width,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          color: Colors.white24,
-        ),
-        child: Icon(
-          Icons.arrow_back_ios_rounded,
-          size: 20,
-          color: Colors.white,
-        ));
+    return GestureDetector(
+      onTap: Get.back,
+      child: Container(
+          alignment: Alignment.center,
+          height: height,
+          width: width,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25),
+            color: Colors.white24,
+          ),
+          child: Icon(
+            Icons.arrow_back_ios_rounded,
+            size: 20,
+            color: Colors.white,
+          )),
+    );
   }
 }

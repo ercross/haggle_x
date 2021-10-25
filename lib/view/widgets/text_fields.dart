@@ -40,6 +40,7 @@ class ShapelessTextField extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             height: height,
             width: width,
+            padding: EdgeInsets.only(bottom: 2),
             decoration: BoxDecoration(
                 color: Colors.transparent,
                 border: Border(
@@ -116,7 +117,7 @@ class __ForPasswordState extends State<_ForPassword> {
         alignment: Alignment.center,
         width: widget.width,
         height: widget.height,
-        padding: EdgeInsets.only(bottom: widget.height * 0.1),
+        padding: EdgeInsets.only(bottom: 2),
         decoration: BoxDecoration(
             color: Colors.transparent,
             border: Border(
@@ -181,6 +182,5 @@ class __ForPasswordState extends State<_ForPassword> {
             )
           ],
         ));
-    ;
   }
 }
